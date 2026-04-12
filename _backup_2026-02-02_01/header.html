@@ -1,0 +1,38 @@
+<nav class="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex-shrink-0 flex items-center">
+        <a href="/tr/index.html" class="text-xl font-bold text-green-600 hover:text-green-700">Meridyen Terapi | Florya</a>
+      </div>
+      <div class="hidden md:flex items-center space-x-8" id="nav-menu">
+        <!-- Menu items will be inserted by script -->
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="/tr/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600">TR</a>
+        <a href="/en/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600 border-l border-gray-300">EN</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+(function() {
+  const path = window.location.pathname;
+  const isTR = path.startsWith('/tr/') || path === '/tr/index.html';
+  let menuHtml = '';
+  if (isTR) {
+    menuHtml = `
+      <a href="/tr/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600 ${path === '/tr/index.html' || path === '/' ? 'bg-green-50 text-green-600' : ''}">Ana Sayfa</a>
+      <a href="/tr/services.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600 ${path === '/tr/services.html' ? 'bg-green-50 text-green-600' : ''}">Hizmetler</a>
+      <a href="/tr/tim.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600 ${path === '/tr/tim.html' ? 'bg-green-50 text-green-600' : ''}">Tim</a>
+      <a href="/tr/about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600 ${path === '/tr/about.html' ? 'bg-green-50 text-green-600' : ''}">Hakkımızda</a>
+    `;
+  } else {
+    menuHtml = `
+      <a href="/en/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600 ${path === '/en/index.html' ? 'bg-green-50 text-green-600' : ''}">Home</a>
+      <a href="/en/services.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600 ${path === '/en/services.html' ? 'bg-green-50 text-green-600' : ''}">Services</a>
+      <a href="/en/about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-600 ${path === '/en/about.html' ? 'bg-green-50 text-green-600' : ''}">About</a>
+    `;
+  }
+  document.getElementById('nav-menu').innerHTML = menuHtml;
+})();
+</script>

@@ -1,0 +1,59 @@
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="h-16 flex items-center justify-between gap-3">
+
+      <!-- Logo -->
+      <a href="/tr/index.html" class="flex items-center gap-2 font-extrabold text-gray-900">
+        <span class="inline-flex w-9 h-9 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white items-center justify-center">M</span>
+        <span class="hidden sm:inline">Meridyen</span>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a data-nav="index" href="/tr/index.html" class="nav-link text-gray-700 hover:text-gray-900">Ana Sayfa</a>
+        <a data-nav="services" href="/tr/services.html" class="nav-link text-gray-700 hover:text-gray-900">Hizmetler</a>
+        <a data-nav="about" href="/tr/about.html" class="nav-link text-gray-700 hover:text-gray-900">Hakkımızda</a>
+        <a data-nav="tim" href="/tr/tim.html" class="nav-link text-gray-700 hover:text-gray-900">Uzman Könül</a>
+        <a data-nav="kariyer" href="/tr/kariyer.html" class="nav-link text-gray-700 hover:text-gray-900">Kariyer</a>
+        <a data-nav="devices" href="/tr/devices.html" class="nav-link text-gray-700 hover:text-gray-900">Cihazlar</a>
+      </nav>
+
+      <!-- Right actions -->
+      <div class="hidden md:flex items-center gap-2">
+        <a href="https://wa.me/905428470198" target="_blank"
+           class="px-4 py-2 rounded-xl bg-green-500 hover:bg-green-600 text-white text-sm font-semibold shadow-sm">
+          WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="mobileMenuBtn"
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-gray-200 hover:bg-gray-50"
+        aria-label="Open menu">
+        <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile panel -->
+    <div id="mobileMenu" class="md:hidden hidden pb-4">
+      <div class="pt-2 grid grid-cols-1 gap-2 text-sm font-semibold">
+        <a data-nav="index" href="/tr/index.html" class="mobile-link px-3 py-2 rounded-xl hover:bg-gray-50">Ana Sayfa</a>
+        <a data-nav="services" href="/tr/services.html" class="mobile-link px-3 py-2 rounded-xl hover:bg-gray-50">Hizmetler</a>
+        <a data-nav="about" href="/tr/about.html" class="mobile-link px-3 py-2 rounded-xl hover:bg-gray-50">Hakkımızda</a>
+        <a data-nav="tim" href="/tr/tim.html" class="mobile-link px-3 py-2 rounded-xl hover:bg-gray-50">Uzman Könül</a>
+        <a data-nav="kariyer" href="/tr/kariyer.html" class="mobile-link px-3 py-2 rounded-xl hover:bg-gray-50">Kariyer</a>
+        <a data-nav="devices" href="/tr/devices.html" class="mobile-link px-3 py-2 rounded-xl hover:bg-gray-50">Cihazlar</a>
+
+        <div class="flex gap-2 pt-2">
+          <a href="https://wa.me/905428470198" target="_blank"
+             class="px-3 py-2 rounded-xl bg-green-500 hover:bg-green-600 text-white text-sm font-semibold text-center">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</header>
