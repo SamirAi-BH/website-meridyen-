@@ -1,124 +1,1185 @@
+/* ============================================================================
+   MERIDYEN TERAPI - NOIR BOTANIK DESIGN SYSTEM
+   theme.css - Complete styling for dark luxury aesthetic
+   ============================================================================ */
+
+/* ============================================================================
+   1. GOOGLE FONTS IMPORT
+   ============================================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ============================================================================
+   2. CSS CUSTOM PROPERTIES (DESIGN TOKENS)
+   ============================================================================ */
 :root {
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Lato', 'Inter', sans-serif;
-  --color-bg: #fff;
-  --color-accent: #10b981; /* emerald-500 */
-  --color-secondary: #b497bd; /* lavender */
-  --color-text: #1f2937;
-  --color-text-secondary: #6b7280;
+  /* Background Colors */
+  --bg-main: #0C0B09;
+  --bg-card: #131210;
+  --bg-card-hover: #1A1815;
+  
+  /* Gold Accent Colors */
+  --gold-primary: #C9A96E;
+  --gold-hover: #D4B87A;
+  --gold-soft: rgba(201, 169, 110, 0.12);
+  --gold-border: rgba(201, 169, 110, 0.1);
+  --gold-border-hover: rgba(201, 169, 110, 0.3);
+  --gold-glow: rgba(201, 169, 110, 0.15);
+  
+  /* Aliases (shorthand for templates) */
+  --gold: #C9A96E;
+  --cream: #F5F0E8;
 
-  --h1-size-desktop: clamp(2.625rem, 5vw, 3.5rem);
-  --h1-size-mobile: clamp(1.875rem, 4vw, 2.25rem);
-  --h2-size: clamp(1.75rem, 3vw, 2.25rem);
-  --text-size: clamp(1rem, 1.5vw, 1.125rem);
-  --line-height: 1.6;
-
-  --section-padding: clamp(4rem, 8vw, 6rem) 1rem;
-  --card-gap: 1.5rem;
-
-  --border-radius: 0.75rem;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  /* Text Colors */
+  --text-primary: #F5F0E8;
+  --text-secondary: rgba(245, 240, 232, 0.55);
+  --text-muted: rgba(245, 240, 232, 0.3);
+  
+  /* Accent Colors */
+  --accent-whatsapp: #25D366;
+  
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sharp: 4px;
+  --radius-medium: 8px;
+  --radius-card: 12px;
+  
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(201, 169, 110, 0.08);
+  --shadow-glow: 0 0 40px rgba(201, 169, 110, 0.15);
+  
+  /* Transitions */
+  --transition-base: all 0.25s ease;
+  --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body {
-  font-family: var(--font-body);
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  line-height: var(--line-height);
-}
-
-h1, h2, h3 {
-  font-family: var(--font-heading);
-  line-height: var(--line-height);
-  margin-bottom: 1.5rem;
-}
-
-h1 {
-  font-size: var(--h1-size-desktop);
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: var(--h1-size-mobile);
+/* ============================================================================
+   3. KEYFRAME ANIMATIONS
+   ============================================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulseWa {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes goldLineDraw {
+  from { width: 0; opacity: 0; }
+  to   { width: 100%; opacity: 0.4; }
+}
+
+/* ============================================================================
+   4. BASE STYLES
+   ============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ============================================================================
+   5. TYPOGRAPHY
+   ============================================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 300;
+  margin-bottom: var(--spacing-lg);
+}
+
 h2 {
-  font-size: var(--h2-size);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 400;
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 400;
+  margin-bottom: var(--spacing-md);
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
 }
 
 p {
-  font-size: var(--text-size);
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
-section {
-  padding: var(--section-padding);
+a {
+  color: var(--gold-primary);
+  text-decoration: none;
+  transition: var(--transition-base);
 }
 
-/* Кнопки */
+a:hover {
+  color: var(--gold-hover);
+  text-decoration: underline;
+}
+
+small {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* ============================================================================
+   5b. FONT UTILITY CLASSES
+   ============================================================================ */
+
+.font-cormorant,
+.font-heading {
+  font-family: var(--font-heading) !important;
+}
+
+.font-body,
+.font-dm-sans {
+  font-family: var(--font-body) !important;
+}
+
+.text-gold {
+  color: var(--gold-primary) !important;
+}
+
+.text-cream {
+  color: var(--cream) !important;
+}
+
+/* ============================================================================
+   6. BUTTON STYLES
+   ============================================================================ */
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius);
-  font-weight: 500;
+  gap: var(--spacing-sm);
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.5;
+  font-weight: 500;
   border: none;
+  border-radius: var(--radius-sharp);
   cursor: pointer;
-  transition: all 0.15s ease-in-out;
+  transition: var(--transition-base);
   text-decoration: none;
-  box-shadow: var(--shadow);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Primary Button - Gold background */
 .btn-primary {
-  background-color: var(--color-accent);
-  color: white;
+  background-color: var(--gold-primary);
+  color: var(--bg-main);
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(201, 169, 110, 0.15);
+  text-align: center;
+  justify-content: center;
 }
 
 .btn-primary:hover {
-  background-color: #059669;
+  background-color: var(--gold-hover);
+  box-shadow: var(--shadow-glow);
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button - Transparent with gold border */
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-text);
-  border: 1px solid var(--color-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--gold-primary);
+  text-align: center;
+  justify-content: center;
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-secondary);
+  background-color: var(--gold-soft);
+  border-color: var(--gold-hover);
+  color: var(--gold-hover);
+}
+
+/* WhatsApp Button - Green pill */
+.btn-whatsapp {
+  background-color: var(--accent-whatsapp);
   color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  text-align: center;
 }
 
-/* Карточки */
-.card {
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
-  background-color: var(--color-bg);
-  transition: all 0.15s ease-in-out;
+.btn-whatsapp:hover {
+  background-color: #1eab57;
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+  transform: translateY(-2px);
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+.btn-whatsapp svg {
+  width: 20px;
+  height: 20px;
 }
 
-/* Header */
-header {
-  background-color: var(--color-bg);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-  position: sticky;
+/* Button Group Spacing */
+.btn-group {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+  
+  .btn-group .btn {
+    width: 100%;
+  }
+}
+
+/* ============================================================================
+   7. CARD COMPONENT
+   ============================================================================ */
+
+.card-noir {
+  background-color: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-card);
+  padding: var(--spacing-lg);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-noir::before {
+  content: '';
+  position: absolute;
   top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 169, 110, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+  pointer-events: none;
+}
+
+.card-noir:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--gold-border-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.card-noir:hover::before {
+  left: 100%;
+}
+
+/* ============================================================================
+   8. DIVIDER
+   ============================================================================ */
+
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-primary),
+    transparent
+  );
+  margin: var(--spacing-xl) 0;
+  opacity: 0.4;
+}
+
+/* ============================================================================
+   9. EYEBROW LABEL
+   ============================================================================ */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--gold-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: var(--gold-primary);
+}
+
+/* ============================================================================
+   10. BADGE
+   ============================================================================ */
+
+.badge-noir {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.875rem;
+  background-color: var(--gold-soft);
+  color: var(--gold-primary);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--gold-border-hover);
+  white-space: nowrap;
+}
+
+/* ============================================================================
+   11. FAQ ACCORDION
+   ============================================================================ */
+
+.faq-item {
+  border-bottom: 1px solid var(--gold-border);
+  margin-bottom: 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-base);
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.faq-question:hover {
+  background-color: rgba(201, 169, 110, 0.05);
+  color: var(--gold-hover);
+}
+
+/* faq icon managed by JS (.faq-icon span) — no ::after needed */
+
+.faq-icon {
+  color: var(--gold-primary);
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-left: 12px;
+  font-weight: 300;
+  font-style: normal;
+  user-select: none;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  background-color: rgba(201, 169, 110, 0.04);
+  color: var(--text-secondary);
+}
+
+.faq-item.open .faq-answer {
+  max-height: 500px;
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+.faq-answer p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================================
+   12. WHATSAPP FLOAT BUTTON
+   ============================================================================ */
+
+.wa-float {
+  position: fixed;
+  bottom: var(--spacing-lg);
+  right: var(--spacing-lg);
+  width: 60px;
+  height: 60px;
+  background-color: var(--accent-whatsapp);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  transition: var(--transition-base);
+  z-index: 999;
+  text-decoration: none;
+  animation: pulseWa 2s infinite;
+  opacity: 0;
+}
+
+.wa-float.visible {
+  opacity: 1;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
+}
+
+.wa-float svg {
+  width: 32px;
+  height: 32px;
+  fill: white;
+}
+
+@media (max-width: 640px) {
+  .wa-float {
+    width: 56px;
+    height: 56px;
+    bottom: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+  
+  .wa-float svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* ============================================================================
+   13. SCROLL REVEAL ANIMATIONS
+   ============================================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Animation Delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+.reveal.visible.stagger-1 { transition-delay: 0.1s; }
+.reveal.visible.stagger-2 { transition-delay: 0.2s; }
+.reveal.visible.stagger-3 { transition-delay: 0.3s; }
+.reveal.visible.stagger-4 { transition-delay: 0.4s; }
+.reveal.visible.stagger-5 { transition-delay: 0.5s; }
+.reveal.visible.stagger-6 { transition-delay: 0.6s; }
+
+/* ============================================================================
+   14. PARALLAX HELPER
+   ============================================================================ */
+
+.parallax-bg {
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.parallax-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+/* ============================================================================
+   15. GOLD SHIMMER TEXT
+   ============================================================================ */
+
+.text-gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold-primary),
+    var(--gold-hover),
+    var(--gold-primary)
+  );
+  background-size: 200% center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ============================================================================
+   16. IMAGE HOVER OVERLAY
+   ============================================================================ */
+
+.img-noir {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+}
+
+.img-noir img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.img-noir::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(201, 169, 110, 0.15);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: var(--radius-card);
+}
+
+.img-noir:hover img {
+  transform: scale(1.05);
+}
+
+.img-noir:hover::after {
+  opacity: 1;
+}
+
+/* ============================================================================
+   17. GRID CARD HOVER
+   ============================================================================ */
+
+.grid-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.grid-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius-card);
+  opacity: 0;
+  box-shadow: inset 0 0 20px rgba(201, 169, 110, 0.2),
+              0 0 20px rgba(201, 169, 110, 0.1);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.grid-card:hover {
+  background-color: var(--bg-card-hover);
+  border-color: var(--gold-hover);
+  transform: translateY(-4px);
+}
+
+.grid-card:hover::before {
+  opacity: 1;
+}
+
+/* ============================================================================
+   18. Z-INDEX STACK
+   (particles=0 → content=2 → header=50 → wa-float=999)
+   ============================================================================ */
+
+#nb-particles {
+  z-index: 0 !important;
+  pointer-events: none;
+}
+
+/* All content layers sit above the particle canvas */
+main,
+#site-footer,
+section,
+.container,
+.card-noir,
+.grid-card {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fixed header stays on top of everything except modals */
+#site-header,
+nav,
+header {
+  position: relative;
   z-index: 50;
 }
 
-/* Footer */
-footer {
-  background-color: var(--color-bg);
-  box-shadow: 0 -1px 3px 0 rgba(0, 0, 0, 0.1);
+/* WhatsApp float on top */
+.wa-float {
+  z-index: 999;
+}
+
+/* ============================================================================
+   19. FIXED HEADER OFFSET
+   First section / main gets top padding so content isn't hidden behind fixed nav
+   ============================================================================ */
+
+body > #site-header ~ main,
+body > #site-header + * {
+  padding-top: 80px;
+}
+
+/* Hero sections don't need extra padding if they already have py-32+ */
+.hero-offset {
+  padding-top: 80px;
+}
+
+/* ============================================================================
+   20. MOBILE RESPONSIVE — FULL BREAKPOINTS
+   ============================================================================ */
+
+/* ── Extra-small phones (≤479px) ── */
+@media (max-width: 479px) {
+  :root {
+    font-size: 14.5px;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 7vw, 2rem);
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 5vw, 1.4rem);
+  }
+
+  /* Hero buttons stack vertically */
+  .hero-btns,
+  .btn-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+
+  .hero-btns .btn,
+  .btn-group .btn {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Cards full-width */
+  .card-noir {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-medium);
+  }
+
+  /* Stats bar stacks */
+  .stats-row {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  /* Section spacing tighter */
+  section {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  /* Eyebrow smaller */
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* FAQ question smaller */
+  .faq-question {
+    font-size: 1rem;
+    padding: var(--spacing-md);
+  }
+
+  /* Dividers thinner */
+  .divider-gold {
+    margin: var(--spacing-lg) 0;
+  }
+
+  /* Nav brand text compact */
+  .nav-brand-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* ── Small phones & landscape (480–767px) ── */
+@media (max-width: 767px) {
+  h1 {
+    font-size: clamp(1.9rem, 7vw, 2.8rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
+  }
+
+  /* Grid: force 1 column on phones */
+  .grid-cols-3-md,
+  .grid-cols-2-md {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Card hover: disable lift on touch */
+  .card-noir:hover,
+  .grid-card:hover {
+    transform: none;
+  }
+
+  /* Button group layout */
+  .btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-group .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Parallax: disable background-attachment:fixed on mobile (causes jank) */
+  .parallax-bg::before {
+    background-attachment: scroll;
+  }
+
+  /* Particle canvas: reduce opacity on mobile */
+  #nb-particles {
+    opacity: 0.3 !important;
+  }
+
+  /* Header: ensure monogram + text side by side */
+  #site-header .flex {
+    flex-wrap: nowrap;
+  }
+
+  /* Footer: single column */
+  #site-footer .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-xl);
+  }
+}
+
+/* ── Tablet (768–1023px) ── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+  }
+
+  /* 2-column grid on tablet */
+  .grid-cols-3-md {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Nav: hide mobile menu, show links */
+  #mobileMenu {
+    display: none !important;
+  }
+}
+
+/* ── Desktop (≥1024px) ── */
+@media (min-width: 1024px) {
+  /* ensure mobile menu never shows on desktop */
+  #mobileMenu {
+    display: none !important;
+  }
+
+  #mobileMenu.open {
+    display: flex !important;
+  }
+}
+
+/* ── Touch devices: disable hover animations ── */
+@media (hover: none) {
+  .card-noir:hover,
+  .grid-card:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-whatsapp:hover {
+    transform: none !important;
+  }
+
+  /* No magnetic effect on touch */
+  .btn-primary,
+  .btn-secondary {
+    transition: background-color 0.2s ease, color 0.2s ease !important;
+  }
+
+  /* No cursor glow on touch */
+  #cursor-glow {
+    display: none !important;
+  }
+}
+
+/* ============================================================================
+   21. REDUCED MOTION SUPPORT
+   ============================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  /* Hide particle canvas entirely */
+  #nb-particles {
+    display: none !important;
+  }
+
+  /* Reveal elements: show immediately without animation */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* No shimmer */
+  .text-gold-shimmer {
+    animation: none !important;
+    -webkit-text-fill-color: var(--gold-primary);
+  }
+
+  /* No WhatsApp pulse */
+  .wa-float {
+    animation: none !important;
+  }
+}
+
+/* ============================================================================
+   22. SAFE AREA INSETS (iPhone notch / home bar)
+   ============================================================================ */
+
+.wa-float {
+  bottom: max(var(--spacing-lg), env(safe-area-inset-bottom, 2rem));
+  right: max(var(--spacing-lg), env(safe-area-inset-right, 2rem));
+}
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ============================================================================
+   23. ACCESSIBILITY — FOCUS STYLES
+   ============================================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================================================
+   24. RESPONSIVE UTILITIES (legacy kept + new)
+   ============================================================================ */
+
+/* Tablet Breakpoint (640px) */
+@media (max-width: 640px) {
+  :root {
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: 0.95rem;
+  }
+  
+  .card-noir {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Small Tablet Breakpoint (768px) */
+@media (max-width: 768px) {
+  .reveal {
+    animation: none;
+  }
+  
+  .reveal.visible {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+}
+
+/* Large Desktop Breakpoint (1024px+) */
+@media (min-width: 1024px) {
+  .reveal {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+}
+
+/* ============================================================================
+   25. PAGE TRANSITION OVERLAY  [WOW Level 1]
+   ============================================================================ */
+
+#page-transition {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-main);
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================================================
+   26. TYPEWRITER CURSOR  [WOW Level 1]
+   ============================================================================ */
+
+.tw-cursor {
+  display: inline-block;
+  color: var(--gold-primary);
+  font-weight: 300;
+  animation: twBlink 1.05s step-end infinite;
+  margin-left: 2px;
+  line-height: 1;
+}
+
+@keyframes twBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+#nb-typewriter {
+  color: var(--text-primary);
+  min-height: 1.2em;
+  display: inline-block;
+}
+
+/* ============================================================================
+   27. CARD 3D TILT — base styles  [WOW Level 1]
+   Touch screens get flat cards; JS adds perspective on desktop
+   ============================================================================ */
+
+@media (hover: hover) and (pointer: fine) {
+  .card-noir {
+    transform-style: preserve-3d;
+    will-change: transform;
+  }
+}
+
+/* ============================================================================
+   28. BOTANICAL SVG DECORATION (hero accent)
+   ============================================================================ */
+
+.botanical-svg {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.12;
+  animation: floatY 8s ease-in-out infinite;
+}
+
+.botanical-svg path,
+.botanical-svg line,
+.botanical-svg polyline {
+  stroke: var(--gold-primary);
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawLine 3s ease forwards 0.8s;
+}
+
+/* Print Styles */
+@media print {
+  .wa-float {
+    display: none;
+  }
+  
+  .btn {
+    color: var(--bg-main);
+    border: 1px solid var(--bg-main);
+  }
+  
+  a {
+    color: var(--bg-main);
+    text-decoration: underline;
+  }
 }

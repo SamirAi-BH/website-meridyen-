@@ -1,79 +1,116 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hizmetler | Meridyen Terapi</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/theme.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetler | Meridyen Terapi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/theme.css">
 </head>
-<body class="bg-white text-gray-800">
+<body style="background-color:#0C0B09; color:#F5F0E8" data-page="services">
+    <div id="site-header"></div>
 
-  <!-- Header -->
-  <div id="site-header"></div>
+    <main>
+        <!-- PAGE HERO SECTION -->
+        <section class="py-20 px-4 md:px-8">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <div class="eyebrow mb-4">HİZMETLER</div>
+                <h1 class="text-5xl md:text-6xl font-cormorant font-bold mb-6 text-white">Seans Seçenekleriniz</h1>
+                <p style="color:#F5F0E8cc" class="text-lg">Konfor odaklı, kişiye özel wellness seansları ile vücudunuzun ihtiyaçlarına uygun hizmet alın.</p>
+            </div>
+        </section>
 
-  <main class="px-4 py-10">
-    <h1 class="text-3xl font-bold text-center mb-10">Hizmetlerimiz</h1>
+        <!-- SERVICES GRID -->
+        <section class="py-20 px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <!-- Aromaterapi Masajı -->
+                <div id="aromaterapi" class="card-noir p-8 reveal stagger-1 relative">
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded text-sm font-bold" style="background-color:#C9A96E; color:#0C0B09">60 dk</div>
+                    <div class="text-3xl mb-4" style="color:#C9A96E">✦</div>
+                    <h3 class="text-2xl font-cormorant font-bold mb-3 text-white">Aromaterapi Masajı</h3>
+                    <p style="color:#F5F0E8cc">Doğal uçucu yağlar kullanılarak yapılan masaj. Stresi azaltır, uyku kalitesini artırır ve genel rahatlama sağlar.</p>
+                </div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-      <!-- 1. Aromaterapi Masajı -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 h-full flex flex-col">
-        <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Aromaterapi Masajı</h3>
-        <p class="text-sm text-gray-600 flex-1">Stresi azaltır, uyku kalitesini artırır</p>
-        <div class="mt-4 text-sm text-gray-500">⏱ 60 dakika</div>
-      </div>
+                <!-- Refleksoloji -->
+                <div id="refleksoloji" class="card-noir p-8 reveal stagger-2 relative">
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded text-sm font-bold" style="background-color:#C9A96E; color:#0C0B09">45 dk</div>
+                    <div class="text-3xl mb-4" style="color:#C9A96E">✦</div>
+                    <h3 class="text-2xl font-cormorant font-bold mb-3 text-white">Refleksoloji</h3>
+                    <p style="color:#F5F0E8cc">Ayak refleks noktalarına uygulanarak sinir sistemi dengesi sağlanır ve derin rahatlama elde edilir.</p>
+                </div>
 
-      <!-- 2. Refleksoloji -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 h-full flex flex-col">
-        <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Refleksoloji</h3>
-        <p class="text-sm text-gray-600 flex-1">Sinir sistemi dengesi ve rahatlama</p>
-        <div class="mt-4 text-sm text-gray-500">⏱ 45 dakika</div>
-      </div>
+                <!-- TENS Tedavisi -->
+                <div id="tens" class="card-noir p-8 reveal stagger-3 relative">
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded text-sm font-bold" style="background-color:#C9A96E; color:#0C0B09">30 dk</div>
+                    <div class="text-3xl mb-4" style="color:#C9A96E">✦</div>
+                    <h3 class="text-2xl font-cormorant font-bold mb-3 text-white">TENS Tedavisi</h3>
+                    <p style="color:#F5F0E8cc">Elektrik stimülasyonu yöntemiyle kas ve sinir ağrılarında etkili sonuçlar sağlar.</p>
+                </div>
 
-      <!-- 3. TENS Tedavisi -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 h-full flex flex-col">
-        <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">TENS Tedavisi</h3>
-        <p class="text-sm text-gray-600 flex-1">Kas ve sinir ağrılarında etkili</p>
-        <div class="mt-4 text-sm text-gray-500">⏱ 30 dakika</div>
-      </div>
+                <!-- Fohow Cihazı ile Terapi -->
+                <div id="fohow" class="card-noir p-8 reveal stagger-4 relative">
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded text-sm font-bold" style="background-color:#C9A96E; color:#0C0B09">20 dk</div>
+                    <div class="text-3xl mb-4" style="color:#C9A96E">✦</div>
+                    <h3 class="text-2xl font-cormorant font-bold mb-3 text-white">Fohow Cihazı ile Terapi</h3>
+                    <p style="color:#F5F0E8cc">Akupunktur etkisi sağlayan iğnesiz teknoloji. Enerji dengesini düzenler ve hızlı sonuç alınır.</p>
+                </div>
 
-      <!-- 4. Fohow Cihazı ile Terapi -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 h-full flex flex-col">
-        <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Fohow Cihazı ile Terapi</h3>
-        <p class="text-sm text-gray-600 flex-1">Akupunktur etkisi, iğnesiz</p>
-        <div class="mt-4 text-sm text-gray-500">⏱ 20 dakika</div>
-      </div>
+                <!-- Lenf Drenaj Masajı -->
+                <div id="lenf-drenaj" class="card-noir p-8 reveal stagger-5 relative">
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded text-sm font-bold" style="background-color:#C9A96E; color:#0C0B09">60 dk</div>
+                    <div class="text-3xl mb-4" style="color:#C9A96E">✦</div>
+                    <h3 class="text-2xl font-cormorant font-bold mb-3 text-white">Lenf Drenaj Masajı</h3>
+                    <p style="color:#F5F0E8cc">Ödem atıcı, detoks etkisi sağlayan özel masaj tekniği. Vücut şekillenmesine ve hafiflik hissine destek sağlar.</p>
+                </div>
 
-      <!-- 5. Lenf Drenaj Masajı -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 h-full flex flex-col">
-        <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Lenf Drenaj Masajı</h3>
-        <p class="text-sm text-gray-600 flex-1">Ödem atıcı, detoks etkisi</p>
-        <div class="mt-4 text-sm text-gray-500">⏱ 60 dakika</div>
-      </div>
+                <!-- Baş & Boyun Masajı -->
+                <div id="bas-boyun" class="card-noir p-8 reveal stagger-6 relative">
+                    <div class="absolute top-4 right-4 px-3 py-1 rounded text-sm font-bold" style="background-color:#C9A96E; color:#0C0B09">30 dk</div>
+                    <div class="text-3xl mb-4" style="color:#C9A96E">✦</div>
+                    <h3 class="text-2xl font-cormorant font-bold mb-3 text-white">Baş & Boyun Masajı</h3>
+                    <p style="color:#F5F0E8cc">Migren, baş ağrısı ve boyun gerginliğinde etkili. Odaklanma gücünü artırır ve yorgunluğu azaltır.</p>
+                </div>
+            </div>
+        </section>
 
-      <!-- 6. Baş & Boyun Masajı -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 h-full flex flex-col">
-        <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Baş & Boyun Masajı</h3>
-        <p class="text-sm text-gray-600 flex-1">Migren ve gerginlik için</p>
-        <div class="mt-4 text-sm text-gray-500">⏱ 30 dakika</div>
-      </div>
+        <!-- HOW IT WORKS SECTION -->
+        <section class="py-20 px-4 md:px-8" style="background-color:#131210">
+            <h2 class="text-center text-4xl font-cormorant mb-16 text-white">Seans Nasıl İşler?</h2>
+            <div class="max-w-5xl mx-auto reveal">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card-noir p-8 relative">
+                        <div class="absolute -top-6 -left-6 w-12 h-12 rounded-full flex items-center justify-center font-cormorant font-bold text-lg text-white" style="background-color:#C9A96E">1</div>
+                        <h3 class="text-2xl font-cormorant font-bold mb-4 text-white pt-4">Kısa Görüşme</h3>
+                        <p style="color:#F5F0E8cc">İlk olarak size detaylı sorular sorarak vücudunuzun durumu, yaşadığınız sorunlar ve beklentileriniz öğrenilir.</p>
+                    </div>
+                    <div class="card-noir p-8 relative">
+                        <div class="absolute -top-6 -left-6 w-12 h-12 rounded-full flex items-center justify-center font-cormorant font-bold text-lg text-white" style="background-color:#C9A96E">2</div>
+                        <h3 class="text-2xl font-cormorant font-bold mb-4 text-white pt-4">Protokol Belirleme</h3>
+                        <p style="color:#F5F0E8cc">Sizin için en uygun tedavi yöntemi ve seans planı belirlenecektir. Tüm seçenekler anlatılacak ve tercih sizin olacak.</p>
+                    </div>
+                    <div class="card-noir p-8 relative">
+                        <div class="absolute -top-6 -left-6 w-12 h-12 rounded-full flex items-center justify-center font-cormorant font-bold text-lg text-white" style="background-color:#C9A96E">3</div>
+                        <h3 class="text-2xl font-cormorant font-bold mb-4 text-white pt-4">Seans & Öneriler</h3>
+                        <p style="color:#F5F0E8cc">Konfor odaklı seanslar başlar. Sonrası evde yapılacak öneriler ve rutin tavsiyesi verilir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    </div>
+        <!-- FINAL CTA SECTION -->
+        <section class="py-20 px-4 md:px-8">
+            <div class="border-t-2 pt-12" style="border-color:#C9A96E">
+                <div class="max-w-3xl mx-auto text-center reveal">
+                    <h2 class="text-4xl font-cormorant font-bold mb-6 text-white">Randevu almak için WhatsApp'tan yazın</h2>
+                    <p style="color:#F5F0E8cc" class="mb-10 text-lg">Size en uygun seansı seçmemiz için detaylı danışma yapacağız. Hızlı ve gizli.</p>
+                    <a href="https://wa.me/905428470198" target="_blank" class="btn-whatsapp mb-8 inline-block">💬 WhatsApp ile Randevu Al</a>
+                    <p class="text-sm" style="color:#F5F0E8cc">Yanıt süresi: 2 saat içinde • Gizlilik garantisi • Sadece kadınlara özel</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- CTA Button -->
-    <a href="https://wa.me/905428470198" target="_blank"
-       class="btn btn-whatsapp">
-       📲 WhatsApp’tan Randevu Al
-    </a>
-
-  </main>
-
-  <!-- Footer -->
-  <div id="site-footer"></div>
-
-  <!-- Скрипты -->
-  <script src="/script.js"></script>
-
+    <div id="site-footer"></div>
+    <script src="/script.js"></script>
 </body>
 </html>

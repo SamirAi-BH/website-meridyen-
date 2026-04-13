@@ -3,301 +3,283 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meridyen Terapi | Florya</title>
+  <title>Meridyen Terapi | Florya — Kadınlara Özel Wellness</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="/theme.css">
 </head>
-
-<body class="bg-white text-gray-800" data-page="index">
+<body style="background-color:#0C0B09; color:#F5F0E8" data-page="index">
   <div id="site-header"></div>
 
-  <!-- PAGE CONTENT -->
-  <!-- сюда вставить твой текущий <main>...</main> БЕЗ ИЗМЕНЕНИЙ -->
-  <main class="max-w-6xl mx-auto px-4 py-10 space-y-16">
+  <main>
 
-    <!-- HERO: 2 сценария -->
-    <section class="relative bg-gray-900 overflow-hidden space-y-5">
-      <img src="/img/konul/img/proc-35.jpg" 
-           alt="Meridyen Terapi" 
-           class="absolute inset-0 w-full h-full object-cover opacity-20" />
-      <div class="relative text-center px-4 space-y-5 py-10">
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white">
-          Meridyen Terapi | Florya
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 parallax-bg" style="background: url('/img/konul/img/proc-12.jpg') center/cover no-repeat; opacity: 0.35;"></div>
+      <!-- Mobile: более заметное фото и градиент -->
+      <div class="absolute inset-0 md:hidden" style="background: url('/img/konul/img/proc-12.jpg') center top/cover no-repeat; opacity: 0.55;"></div>
+      <div class="absolute inset-0 md:hidden" style="background: linear-gradient(to bottom, rgba(12,11,9,0.05) 25%, rgba(12,11,9,0.75) 80%, rgba(12,11,9,0.97) 100%);"></div>
+      <div class="relative z-10 text-center px-4 max-w-3xl reveal">
+        <div class="eyebrow mb-4">FLORYA — İSTANBUL</div>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4" style="font-family: var(--font-heading); color: #fff;">
+          <span id="nb-typewriter" data-words="Stres mi?|Boyun ağrısı mı?|Uyku sorunu mu?|Ödem mi?|Yorgunluk mu?"></span>
         </h1>
-        <p class="text-lg text-gray-200 max-w-2xl mx-auto">
-          Kadınlara özel, sakin ve güvenli bir wellness alanı. Rahatlamayı ve enerji dengesini destekleyen kişiye özel seanslar.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="/tr/services.html#seanslar" class="btn btn-primary">Seans almak istiyorum</a>
-          <a href="/tr/kariyer.html" class="btn btn-secondary">FOHOW ile kariyer istiyorum</a>
-          <a href="https://wa.me/905428470198" target="_blank" class="btn btn-whatsapp">WhatsApp</a>
+        <p class="text-xl md:text-2xl mb-4" style="font-family: var(--font-heading); color: rgba(201,169,110,0.9); font-weight:300;">Bedeninizin sesini dinleyin.</p>
+        <p class="text-lg mb-10" style="color: rgba(245,240,232,0.65);">Kadınlara özel, konfor odaklı wellness seansları ile bedeninizin doğal dengesini destekleyin.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a href="/tr/services.html#seanslar" class="btn-primary">Seans almak istiyorum →</a>
+          <a href="/tr/kariyer.html" class="btn-secondary">Kariyer & FOHOW →</a>
+          <a href="https://wa.me/905428470198" target="_blank" class="btn-whatsapp">WhatsApp</a>
         </div>
-
-        <p class="text-sm text-gray-300">
-          WhatsApp ile hızlı randevu • Gizlilik • Florya, İstanbul
-        </p>
+        <p class="text-sm" style="color: rgba(245,240,232,0.5);">WhatsApp ile hızlı randevu • Gizlilik • Florya, İstanbul</p>
       </div>
     </section>
 
     <!-- PROBLEM CARDS -->
-    <section class="space-y-6">
-      <div class="text-center space-y-2">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Sizi şu an ne rahatsız ediyor?</h2>
-        <p class="text-gray-600">Hedefinizi seçin — ilgili seanslara yönlendirelim.</p>
+    <section class="py-20 px-4 md:px-8">
+      <div class="divider-gold mb-12"></div>
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: var(--font-heading); color: #fff;">Sizi şu an ne rahatsız ediyor?</h2>
+        <p style="color: rgba(245,240,232,0.6);">Hedefinizi seçin — ilgili seanslara yönlendirelim.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a href="/tr/services.html#sirt-bel" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Sırt / Bel</h3>
-          <p class="text-sm text-gray-600">Ağrı ve gerginlik hissini rahatlatmaya yardımcı olur</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <a href="/tr/services.html#sirt-bel" class="card-noir p-6 reveal stagger-1">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Sırt / Bel</h3>
+          <p style="color: rgba(245,240,232,0.6);">Ağrı ve gerginlik hissini rahatlatmaya yardımcı olur</p>
         </a>
-
-        <a href="/tr/services.html#boyun-omuz" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Boyun / Omuz</h3>
-          <p class="text-sm text-gray-600">Kas gerginliği ve ekran yorgunluğuna destek</p>
+        <a href="/tr/services.html#boyun-omuz" class="card-noir p-6 reveal stagger-2">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Boyun / Omuz</h3>
+          <p style="color: rgba(245,240,232,0.6);">Kas gerginliği ve ekran yorgunluğuna destek</p>
         </a>
-
-        <a href="/tr/services.html#stres-uyku" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Stres / Uyku</h3>
-          <p class="text-sm text-gray-600">Daha sakin bir ritme geçişi destekler</p>
+        <a href="/tr/services.html#stres-uyku" class="card-noir p-6 reveal stagger-3">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Stres / Uyku</h3>
+          <p style="color: rgba(245,240,232,0.6);">Daha sakin bir ritme geçişi destekler</p>
         </a>
-
-        <a href="/tr/services.html#odem" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Ödem / Bacak</h3>
-          <p class="text-sm text-gray-600">Hafiflik ve konfor hissine destek</p>
+        <a href="/tr/services.html#odem" class="card-noir p-6 reveal stagger-4">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Ödem / Bacak</h3>
+          <p style="color: rgba(245,240,232,0.6);">Hafiflik ve konfor hissine destek</p>
         </a>
-
-        <a href="/tr/services.html#detoks" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Detoks / Lenf</h3>
-          <p class="text-sm text-gray-600">Rutinleri destekleyen rahatlatıcı seanslar</p>
+        <a href="/tr/services.html#detoks" class="card-noir p-6 reveal stagger-5">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Detoks / Lenf</h3>
+          <p style="color: rgba(245,240,232,0.6);">Rutinleri destekleyen rahatlatıcı seanslar</p>
         </a>
-
-        <a href="/tr/services.html#selulit" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Tonus / Görünüm</h3>
-          <p class="text-sm text-gray-600">Cilt görünümü ve tonus desteği</p>
+        <a href="/tr/services.html#selulit" class="card-noir p-6 reveal stagger-6">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Tonus / Görünüm</h3>
+          <p style="color: rgba(245,240,232,0.6);">Cilt görünümü ve tonus desteği</p>
         </a>
-
-        <a href="/tr/services.html#yuz" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Yüz / Canlılık</h3>
-          <p class="text-sm text-gray-600">Daha dinç görünümü destekler</p>
+        <a href="/tr/services.html#yuz" class="card-noir p-6 reveal">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Yüz / Canlılık</h3>
+          <p style="color: rgba(245,240,232,0.6);">Daha dinç görünümü destekler</p>
         </a>
-
-        <a href="/tr/services.html#enerji" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Enerji Düşüklüğü</h3>
-          <p class="text-sm text-gray-600">Günlük denge ve rahatlama hissine destek</p>
+        <a href="/tr/services.html#enerji" class="card-noir p-6 reveal">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Enerji Düşüklüğü</h3>
+          <p style="color: rgba(245,240,232,0.6);">Günlük denge ve rahatlama hissine destek</p>
         </a>
-        <a href="/tr/services.html#seanslar" class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full hover:bg-gray-50">
-          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 text-white flex items-center justify-center font-bold mb-4">✦</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Düşmanlık</h3>
-          <p class="text-sm text-gray-600">Vücudun genel dengesi ve sakinlik hissine destek</p>
+        <a href="/tr/services.html#seanslar" class="card-noir p-6 reveal">
+          <div class="text-2xl mb-4" style="color: var(--gold);">✦</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Genel Denge</h3>
+          <p style="color: rgba(245,240,232,0.6);">Vücudun genel dengesi ve sakinlik hissine destek</p>
         </a>
-
       </div>
 
-      <div class="text-center">
-        <a href="https://wa.me/905428470198" target="_blank" class="btn btn-whatsapp">2 dakikada öneri al (WhatsApp)</a>
+      <div class="text-center mt-10">
+        <a href="https://wa.me/905428470198" target="_blank" class="btn-whatsapp">2 dakikada öneri al (WhatsApp)</a>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="py-16 px-4" style="background-color: #131210;">
+      <div class="card-noir p-10 md:p-12 max-w-5xl mx-auto reveal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <div class="text-4xl md:text-5xl font-bold mb-3" style="font-family: var(--font-heading); color: var(--gold);">
+              <span data-counter="500">0</span>+
+            </div>
+            <p style="color: rgba(245,240,232,0.6);">Mutlu Danışan</p>
+          </div>
+          <div>
+            <div class="text-4xl md:text-5xl font-bold mb-3" style="font-family: var(--font-heading); color: var(--gold);">
+              <span data-counter="6">0</span>+
+            </div>
+            <p style="color: rgba(245,240,232,0.6);">Yıl Deneyim</p>
+          </div>
+          <div>
+            <div class="text-4xl md:text-5xl font-bold mb-3" style="font-family: var(--font-heading); color: var(--gold);">%100</div>
+            <p style="color: rgba(245,240,232,0.6);">Kadınlara Özel</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- WHY US -->
-    <section class="space-y-6">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 text-center">Neden Meridyen Terapi?</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full">
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Kadınlara özel güvenli alan</h3>
-          <p class="text-sm text-gray-600">Sakin atmosfer, gizlilik ve nazik yaklaşım.</p>
+    <section class="py-20 px-4 md:px-8">
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-16" style="font-family: var(--font-heading); color: #fff;">Neden Meridyen Terapi?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="card-noir p-8 reveal stagger-1">
+          <h3 class="text-xl font-bold mb-4" style="font-family: var(--font-heading); color: #fff;">Kadınlara Özel Güvenli Alan</h3>
+          <p style="color: rgba(245,240,232,0.6);">Sakin atmosfer, gizlilik ve nazik yaklaşım.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full">
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Konfor odaklı yöntemler</h3>
-          <p class="text-sm text-gray-600">İğnesiz, rahatlatıcı seans deneyimi.</p>
+        <div class="card-noir p-8 reveal stagger-3">
+          <h3 class="text-xl font-bold mb-4" style="font-family: var(--font-heading); color: #fff;">Konfor Odaklı Yöntemler</h3>
+          <p style="color: rgba(245,240,232,0.6);">İğnesiz, rahatlatıcı seans deneyimi.</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full">
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Kişiye özel protokol</h3>
-          <p class="text-sm text-gray-600">Hedefe göre seans planı ve yönlendirme.</p>
+        <div class="card-noir p-8 reveal stagger-5">
+          <h3 class="text-xl font-bold mb-4" style="font-family: var(--font-heading); color: #fff;">Kişiye Özel Protokol</h3>
+          <p style="color: rgba(245,240,232,0.6);">Hedefe göre seans planı ve yönlendirme.</p>
         </div>
       </div>
     </section>
 
-    <!-- WHY MERIDYEN CHOSEN? -->
-    <section class="space-y-6">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 text-center">Neden Tekrar Tercih Ediliyoruz?</h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full">
-          <div class="text-2xl">👩</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Kadınlara Özel Alan</h3>
-          <p class="text-sm text-gray-600">Yalnızca kadınlar için tasarlanmış sakin atmosfer</p>
-          <p class="text-sm text-gray-600 mt-1">Sınıf ötesi gizlilik ve güvenlik</p>
+    <!-- WHY CHOSEN -->
+    <section class="py-20 px-4 md:px-8" style="background-color: #131210;">
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-16" style="font-family: var(--font-heading); color: #fff;">Neden Tekrar Tercih Ediliyoruz?</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div class="card-noir p-6 reveal stagger-1">
+          <div class="text-3xl mb-4" style="color: var(--gold);">&#9733;</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Kadınlara Özel Alan</h3>
+          <p style="color: rgba(245,240,232,0.6);">Yalnızca kadınlar için tasarlanmış sakin atmosfer</p>
         </div>
-
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full">
-          <div class="text-2xl">🔒</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Güven & Gizlilik</h3>
-          <p class="text-sm text-gray-600">Kişisel verileriniz kesinlikle güvende</p>
-          <p class="text-sm text-gray-600 mt-1">Tıbbi geçmişinizle sınırlandırılmış erişim</p>
+        <div class="card-noir p-6 reveal stagger-2">
+          <div class="text-3xl mb-4" style="color: var(--gold);">&#9670;</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Güven & Gizlilik</h3>
+          <p style="color: rgba(245,240,232,0.6);">Kişisel verileriniz kesinlikle güvende</p>
         </div>
-
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full">
-          <div class="text-2xl">🌤</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Konfor Odaklı Seanslar</h3>
-          <p class="text-sm text-gray-600">Bireyselleştirilmiş denge planlaması</p>
-          <p class="text-sm text-gray-600 mt-1">Rahatlatıcı ortam ve nazik yaklaşım</p>
+        <div class="card-noir p-6 reveal stagger-3">
+          <div class="text-3xl mb-4" style="color: var(--gold);">&#10047;</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Konfor Odaklı Seanslar</h3>
+          <p style="color: rgba(245,240,232,0.6);">Bireyselleştirilmiş denge planlaması</p>
         </div>
-
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 h-full">
-          <div class="text-2xl">✨</div>
-          <h3 class="text-lg font-semibold text-gray-900 min-h-[3rem]">Kişiye Özel Yaklaşım</h3>
-          <p class="text-sm text-gray-600">Günlük yaşamınızla uyumlu rutinler</p>
-          <p class="text-sm text-gray-600 mt-1">İhtiyaçlarınıza özel devam desteği</p>
+        <div class="card-noir p-6 reveal stagger-4">
+          <div class="text-3xl mb-4" style="color: var(--gold);">&#10022;</div>
+          <h3 class="text-lg font-semibold mb-2" style="font-family: var(--font-heading); color: #fff;">Kişiye Özel Yaklaşım</h3>
+          <p style="color: rgba(245,240,232,0.6);">Günlük yaşamınızla uyumlu rutinler</p>
         </div>
       </div>
     </section>
 
     <!-- CAREER TEASER -->
-    <section class="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div class="space-y-3">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">FOHOW ile yeni bir yol: Kariyer & Eğitim</h2>
-        <p class="text-gray-600 text-lg">
-          Cihaz seçimi, eğitim ve WhatsApp destek sistemi. Evde başlayın, salonunuza taşıyın.
-        </p>
-        <ul class="list-disc list-inside text-gray-600">
-          <li>Amaca uygun cihaz önerisi</li>
-          <li>Eğitim + protokol planı</li>
-          <li>Başlangıç sürecinde WhatsApp destek</li>
-        </ul>
-        <div class="mt-5 flex flex-col sm:flex-row gap-3">
-          <a href="/tr/kariyer.html" class="btn btn-primary">Kariyeri incele</a>
-          <a href="/tr/devices.html" class="btn btn-secondary">Cihazlar</a>
+    <section class="py-20 px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto items-center">
+        <div class="reveal space-y-4">
+          <div class="eyebrow">FOHOW KARİYER</div>
+          <h2 class="text-3xl md:text-4xl font-bold" style="font-family: var(--font-heading); color: #fff;">Kendi Wellness Kariyerinizi Kurun</h2>
+          <p style="color: rgba(245,240,232,0.6);" class="text-lg">
+            Cihaz seçimi, eğitim ve WhatsApp destek sistemi. Evde başlayın, salonunuza taşıyın.
+          </p>
+          <ul class="space-y-3" style="color: rgba(245,240,232,0.6);">
+            <li class="flex items-center"><span style="color: var(--gold);" class="mr-3">✦</span>Amaca uygun cihaz önerisi</li>
+            <li class="flex items-center"><span style="color: var(--gold);" class="mr-3">✦</span>Eğitim + protokol planı</li>
+            <li class="flex items-center"><span style="color: var(--gold);" class="mr-3">✦</span>Başlangıç sürecinde WhatsApp destek</li>
+          </ul>
+          <div class="flex flex-col sm:flex-row gap-3 pt-4">
+            <a href="/tr/kariyer.html" class="btn-primary">Kariyeri incele →</a>
+            <a href="/tr/devices.html" class="btn-secondary">Cihazlar →</a>
+          </div>
         </div>
-      </div>
-      <div class="bg-white rounded-2xl border border-gray-100 p-6">
-        <h3 class="text-lg font-semibold text-gray-900">Hızlı başlangıç</h3>
-        <p class="text-sm text-gray-600 mt-2">Hedefinizi yazın — size uygun yol haritasını gönderelim.</p>
-        <a href="https://wa.me/905428470198" target="_blank" class="btn btn-whatsapp mt-4">WhatsApp’tan yaz</a>
-        <p class="text-xs text-gray-500 mt-3">Wellness odaklı bilgilendirme • Tıbbi tanı/tedavi değildir</p>
+        <div class="card-noir p-8 reveal">
+          <h3 class="text-xl font-semibold mb-4" style="font-family: var(--font-heading); color: #fff;">Hızlı başlangıç</h3>
+          <p style="color: rgba(245,240,232,0.6);" class="mb-6">Hedefinizi yazın — size uygun yol haritasını gönderelim.</p>
+          <a href="https://wa.me/905428470198" target="_blank" class="btn-whatsapp w-full text-center block">WhatsApp'tan yaz</a>
+          <p class="text-xs mt-4" style="color: rgba(245,240,232,0.4);">Wellness odaklı bilgilendirme • Tıbbi tanı/tedavi değildir</p>
+        </div>
       </div>
     </section>
 
     <!-- REVIEWS -->
-    <section class="space-y-6">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 text-center">Danışan Yorumları</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-          <p class="text-gray-700">“İlk seanstan sonra daha hafif hissettim.”</p>
-          <p class="text-sm text-gray-500 mt-3">A., 34</p>
+    <section class="py-20 px-4 md:px-8" style="background-color: #131210;">
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-16" style="font-family: var(--font-heading); color: #fff;">Danışan Yorumları</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="card-noir p-8 reveal stagger-1">
+          <div class="text-4xl mb-4" style="color: var(--gold);">&#8222;</div>
+          <p class="italic mb-6" style="color: rgba(245,240,232,0.7);">İlk seanstan sonra daha hafif hissettim. Ortam çok sakin ve güvenli.</p>
+          <p class="font-semibold" style="font-family: var(--font-heading); color: var(--gold);">A., 34</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-          <p class="text-gray-700">“Daha sakinim, uyku düzenim toparlandı.”</p>
-          <p class="text-sm text-gray-500 mt-3">E., 29</p>
+        <div class="card-noir p-8 reveal stagger-3">
+          <div class="text-4xl mb-4" style="color: var(--gold);">&#8222;</div>
+          <p class="italic mb-6" style="color: rgba(245,240,232,0.7);">Daha sakinim, uyku düzenim toparlandı. Kişiye özel yaklaşım gerçekten fark yaratıyor.</p>
+          <p class="font-semibold" style="font-family: var(--font-heading); color: var(--gold);">E., 29</p>
         </div>
-        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-          <p class="text-gray-700">“Boyun gerginliğim azaldı, rahatladım.”</p>
-          <p class="text-sm text-gray-500 mt-3">S., 41</p>
+        <div class="card-noir p-8 reveal stagger-5">
+          <div class="text-4xl mb-4" style="color: var(--gold);">&#8222;</div>
+          <p class="italic mb-6" style="color: rgba(245,240,232,0.7);">Boyun gerginliğim azaldı, rahatladım. Kadınlara özel ortam benim için çok önemliydi.</p>
+          <p class="font-semibold" style="font-family: var(--font-heading); color: var(--gold);">S., 41</p>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="space-y-6">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 text-center">Sık Sorulan Sorular</h2>
-      <div class="space-y-4">
-        <div class="bg-white rounded-2xl border border-gray-100 p-6">
-          <h3 class="font-semibold text-gray-900">Seanslar ağrılı mı?</h3>
-          <p class="text-gray-600 mt-2">Genelde konfor odaklıdır. Kişiye göre uygulama şiddeti ayarlanır.</p>
+    <section class="py-20 px-4 md:px-8">
+      <h2 class="text-center text-3xl md:text-4xl font-bold mb-16" style="font-family: var(--font-heading); color: #fff;">Sık Sorulan Sorular</h2>
+      <div class="max-w-2xl mx-auto reveal space-y-4">
+        <div class="faq-item card-noir p-6">
+          <div class="faq-question cursor-pointer flex justify-between items-center" style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff;">
+            <span>Seanslar ağrılı mı?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="pt-4" style="color: rgba(245,240,232,0.65);">Hayır, seanslar tamamen konfor odaklıdır. Hiçbir çalışmada ibre veya ağrılı alet kullanılmaz. Uygulama şiddeti size göre ayarlanır; geri bildiriminize göre anlık uyum sağlanır. Konfor her zaman önceliğimizdedir.</p>
+          </div>
         </div>
-        <div class="bg-white rounded-2xl border border-gray-100 p-6">
-          <h3 class="font-semibold text-gray-900">Kaç seans önerirsiniz?</h3>
-          <p class="text-gray-600 mt-2">Hedefinize göre değişir. Düzenli rutin için genelde 4–8 seans önerilir.</p>
+        <div class="faq-item card-noir p-6">
+          <div class="faq-question cursor-pointer flex justify-between items-center" style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff;">
+            <span>Kaç seans önerirsiniz?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="pt-4" style="color: rgba(245,240,232,0.65);">Bu tamamen hedefinize bağlıdır. Tek bir seanstan fark hisseden kişiler var; ama düzenli bir etki için genellikle 4–8 seans önerilir. İlk seans sonrasında Könül Hanım sizin için en uygun planı önerir.</p>
+          </div>
         </div>
-        <div class="bg-white rounded-2xl border border-gray-100 p-6">
-          <h3 class="font-semibold text-gray-900">İlk randevuda ne olur?</h3>
-          <p class="text-gray-600 mt-2">Kısa görüşme → hedef belirleme → uygun seans seçimi → uygulama.</p>
+        <div class="faq-item card-noir p-6">
+          <div class="faq-question cursor-pointer flex justify-between items-center" style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff;">
+            <span>İlk randevuda ne olur?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="pt-4" style="color: rgba(245,240,232,0.65);">Kısa bir bilgilendirme görüşmesiyle başlanır: neyle raştsız olduğunuz, beklentileriniz ve sağlık geçmişiniz dinlenir. Ardından size en uygun seans belirlenir ve uygulamaya geçilir. Sonunda ev rutini ve öneriler sunulur.</p>
+          </div>
         </div>
-        <div class="bg-white rounded-2xl border border-gray-100 p-6">
-          <h3 class="font-semibold text-gray-900">Seans sonrası ne hissederim?</h3>
-          <p class="text-gray-600 mt-2">Birçok kişi daha rahat, daha hafif ve sakin hissettiğini söyler.</p>
+        <div class="faq-item card-noir p-6">
+          <div class="faq-question cursor-pointer flex justify-between items-center" style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff;">
+            <span>Seans sonrası ne hissederim?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="pt-4" style="color: rgba(245,240,232,0.65);">Birçoğu, seansn sonrasında daha hafif, daha sakin ve kas gerginliği azalmış hissettiğini ifade eder. Bazıları aynı akşam daha derin uyuduğunu, bazıları ise enerji artışı yaşadığını söyler. Her beden farklıdır.</p>
+          </div>
         </div>
-        <div class="bg-white rounded-2xl border border-gray-100 p-6">
-          <h3 class="font-semibold text-gray-900">Bu hizmet tıbbi tedavi midir?</h3>
-          <p class="text-gray-600 mt-2">Hayır. Wellness odaklı destekleyici uygulamalardır; tıbbi tanı/tedavi yerine geçmez.</p>
+        <div class="faq-item card-noir p-6">
+          <div class="faq-question cursor-pointer flex justify-between items-center" style="font-family: var(--font-heading); font-size: 1.1rem; color: #fff;">
+            <span>Bu hizmet tıbbi tedavi midir?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="pt-4" style="color: rgba(245,240,232,0.65);">Hayır. Meridyen Terapi wellness odaklı, destekleyici uygulamalardır; tıbbi tanı veya tedavinin yerini tutmaz. Tıbbi bir durumunuz varsa önce doktorunuza danışmanız gerekir. Seanslarımız genel sağlığı ve konforu desteklemeye yöneliktir.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="bg-gray-50 border border-gray-100 rounded-2xl p-6 md:p-10 text-center">
-      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Size en uygun seansı birlikte seçelim</h2>
-      <p class="mt-3 text-gray-600 text-lg">WhatsApp’tan yazın — 2 dakikada yönlendirelim.</p>
-      <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="https://wa.me/905428470198" target="_blank" class="btn btn-whatsapp">WhatsApp’tan yaz</a>
-        <a href="/tr/services.html#seanslar" class="btn btn-secondary">Seansları gör</a>
-      </div>
-      <p class="mt-4 text-sm text-gray-500">Gizlilik • Kadınlara özel alan • Florya, İstanbul</p>
-    </section>
-
-    <!-- НОВЫЙ ПРОЗВОДЯЩИЙ БЛОК -->
-    <section class="space-y-6">
-      <div class="text-center space-y-3">
-        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900">Her seans bir yolculuktur</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Kısa süreli rahatlama değil — sürdürülebilir denge ve konfor odaklı yaklaşım.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center">
-          <h3 class="text-lg font-semibold text-gray-900">Kişiye özel seans planı</h3>
-        </div>
-        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center">
-          <h3 class="text-lg font-semibold text-gray-900">Kadınlara özel güvenli alan</h3>
-        </div>
-        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5 text-center">
-          <h3 class="text-lg font-semibold text-gray-900">WhatsApp ile birebir yönlendirme</h3>
+    <!-- FINAL CTA -->
+    <section class="py-20 px-4 md:px-8" style="background-color: #131210;">
+      <div style="border-top: 2px solid var(--gold);" class="pt-12">
+        <div class="max-w-3xl mx-auto text-center reveal">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6" style="font-family: var(--font-heading); color: #fff;">Size en uygun seansı birlikte seçelim</h2>
+          <p class="mb-10 text-lg" style="color: rgba(245,240,232,0.6);">WhatsApp'tan yazın — 2 dakikada yönlendirelim.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="https://wa.me/905428470198" target="_blank" class="btn-whatsapp">WhatsApp'tan yaz</a>
+            <a href="/tr/services.html#seanslar" class="btn-secondary">Seansları gör →</a>
+          </div>
+          <p class="text-sm" style="color: rgba(245,240,232,0.4);">Gizlilik • Kadınlara özel alan • Florya, İstanbul</p>
         </div>
       </div>
-
-      <div class="text-center">
-        <a href="https://wa.me/905428470198" class="btn btn-whatsapp">
-          WhatsApp’tan danış
-        </a>
-      </div>
-    </section>
-
-    <!-- НОВЫЙ МАРКЕТИНГОВЫЙ БЛОК -->
-    <section class="space-y-6 bg-gradient-to-b from-purple-50 to-pink-50 border border-gray-100 rounded-2xl p-8 md:p-12 text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Kadınlara Özel Güvenli Alan</h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Florya'da konfor odaklı seanslar. Kişiye özel yaklaşım ile sürdürülebilir rahatlama ve denge.
-      </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-3xl mb-3">🔒</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Güven & Gizlilik</h3>
-          <p class="text-gray-600">Tamamen kadınlara özel, sakin ortam.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-3xl mb-3">🛋️</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Konfor Önceliği</h3>
-          <p class="text-gray-600">Nazik, kişiye özel seans deneyimi.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-3xl mb-3">📱</div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Birebir Destek</h3>
-          <p class="text-gray-600">WhatsApp takip ve rutin planlaması.</p>
-        </div>
-      </div>
-      <a href="https://wa.me/905428470198" class="btn btn-whatsapp inline-block">WhatsApp’tan Danış →</a>
-      <p class="text-sm text-gray-500 mt-4">Florya, İstanbul • Wellness odaklı</p>
     </section>
 
   </main>
