@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /.claude/
+Disallow: /.playwright-mcp/
+Disallow: /.vscode/
+Disallow: /_backup_2026-02-02_01/
+
+Sitemap: https://meridyenmasajfohow.com.tr/sitemap.xml

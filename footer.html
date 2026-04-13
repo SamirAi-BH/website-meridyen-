@@ -1,7 +1,7 @@
 <footer class="border-t" style="background-color: var(--bg-main); border-color: rgba(201, 169, 110, 0.2);">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
     <!-- Main Footer Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8">
+    <div class="footer-grid grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-8">
       <!-- Brand Column -->
       <div class="space-y-4">
         <div class="flex items-center gap-3">
@@ -39,6 +39,12 @@
               Florya, İstanbul
             </p>
           </div>
+          <div>
+            <p style="color: rgba(245, 240, 232, 0.6);">Hizmet Bölgesi:</p>
+            <p style="color: rgba(245, 240, 232, 0.8);">
+              Florya, Bakırköy ve İstanbul geneli
+            </p>
+          </div>
         </div>
       </div>
 
@@ -48,7 +54,7 @@
           Hızlı Linkler
         </h3>
         <div class="space-y-2 font-body text-sm">
-          <a href="/tr/index.html" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
+          <a href="/tr/" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
             Ana Sayfa
           </a>
           <a href="/tr/services.html" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
@@ -57,10 +63,10 @@
           <a href="/tr/about.html" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
             Hakkımızda
           </a>
-          <a href="/tr/expert.html" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
+          <a href="/tr/tim.html" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
             Uzman Könül
           </a>
-          <a href="/tr/career.html" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
+          <a href="/tr/kariyer.html" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
             Kariyer
           </a>
           <a href="/tr/devices.html" class="block transition-colors duration-300" style="color: rgba(245, 240, 232, 0.6); hover-color: var(--cream);">
@@ -82,20 +88,5 @@
   </div>
 
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/905428470198" target="_blank" aria-label="WhatsApp" class="wa-float">💬</a>
-
-  <script>
-    // Footer link hover effect
-    document.querySelectorAll('footer a[href]').forEach(link => {
-      link.addEventListener('mouseenter', function() {
-        this.style.color = 'var(--cream)';
-      });
-      link.addEventListener('mouseleave', function() {
-        const href = this.getAttribute('href');
-        if (!href.includes('wa.me')) {
-          this.style.color = 'rgba(245, 240, 232, 0.6)';
-        }
-      });
-    });
-  </script>
+  <a href="https://wa.me/905428470198" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="wa-float">💬</a>
 </footer>

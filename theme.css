@@ -755,7 +755,7 @@ small {
 
 /* All content layers sit above the particle canvas */
 main,
-#site-footer,
+footer,
 section,
 .container,
 .card-noir,
@@ -765,7 +765,6 @@ section,
 }
 
 /* Fixed header stays on top of everything except modals */
-#site-header,
 nav,
 header {
   position: relative;
@@ -782,8 +781,8 @@ header {
    First section / main gets top padding so content isn't hidden behind fixed nav
    ============================================================================ */
 
-body > #site-header ~ main,
-body > #site-header + * {
+body > header + main,
+body > header ~ main {
   padding-top: 80px;
 }
 
@@ -919,12 +918,12 @@ body > #site-header + * {
   }
 
   /* Header: ensure monogram + text side by side */
-  #site-header .flex {
+  header .flex {
     flex-wrap: nowrap;
   }
 
   /* Footer: single column */
-  #site-footer .footer-grid {
+  footer .footer-grid {
     grid-template-columns: 1fr !important;
     gap: var(--spacing-xl);
   }

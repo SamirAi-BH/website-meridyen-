@@ -1,0 +1,19 @@
+{
+  "name": "Meridyen Terapi",
+  "short_name": "Meridyen",
+  "description": "Florya'da kadınlara özel meridyen masajı ve wellness seansları.",
+  "lang": "tr-TR",
+  "start_url": "/tr/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0C0B09",
+  "theme_color": "#0C0B09",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

@@ -2,9 +2,9 @@
  * MERIDYEN TERAPI — NOIR BOTANIK
  * script.js  |  Vanilla ES6+ — no dependencies
  * ─────────────────────────────────────────────
- * 1.  Header / Footer fetch loader
- * 2.  Mobile menu
- * 3.  Active nav link
+ * 1.  Mobile menu
+ * 2.  Active nav link
+ * 3.  Footer link behavior
  * 4.  Scroll-reveal (Intersection Observer)
  * 5.  Parallax hero
  * 6.  Counter animation
@@ -23,7 +23,9 @@
 
 // ── INIT ────────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  loadComponents();          // #1 – fetch header + footer
+  initMobileMenu();          // #1
+  initActiveNav();           // #2
+  initFooterLinks();         // #3
   initScrollReveal();        // #4
   initParallax();            // #5
   initCounters();            // #6
@@ -40,31 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageTransition();      // #17
 });
 
-// ── 1. HEADER / FOOTER FETCH LOADER ────────────────────────────────────────
-function loadComponents() {
-  const headerSlot = document.getElementById('site-header');
-  const footerSlot = document.getElementById('site-footer');
-
-  if (headerSlot) {
-    fetch('/header.html')
-      .then(r => r.text())
-      .then(html => {
-        headerSlot.innerHTML = html;
-        initMobileMenu();   // #2 – must run AFTER header is in DOM
-        initActiveNav();    // #3
-      })
-      .catch(() => {/* silent fail */});
-  }
-
-  if (footerSlot) {
-    fetch('/footer.html')
-      .then(r => r.text())
-      .then(html => { footerSlot.innerHTML = html; })
-      .catch(() => {});
-  }
-}
-
-// ── 2. MOBILE MENU ──────────────────────────────────────────────────────────
+// ── 1. MOBILE MENU ──────────────────────────────────────────────────────────
 function initMobileMenu() {
   const btn   = document.getElementById('mobileMenuBtn');
   const menu  = document.getElementById('mobileMenu');
@@ -85,7 +63,7 @@ function initMobileMenu() {
   });
 }
 
-// ── 3. ACTIVE NAV ───────────────────────────────────────────────────────────
+// ── 2. ACTIVE NAV ───────────────────────────────────────────────────────────
 function initActiveNav() {
   const page = document.body.getAttribute('data-page') || '';
   document.querySelectorAll('[data-nav]').forEach(link => {
@@ -93,6 +71,30 @@ function initActiveNav() {
       link.style.color = 'var(--cream)';
       link.style.borderBottomColor = 'var(--gold)';
     }
+  });
+}
+
+// ── 3. FOOTER LINKS ─────────────────────────────────────────────────────────
+function initFooterLinks() {
+  document.querySelectorAll('footer a[href]').forEach(link => {
+    link.addEventListener('mouseenter', function () {
+      this.style.color = 'var(--cream)';
+    });
+
+    link.addEventListener('mouseleave', function () {
+      const href = this.getAttribute('href') || '';
+      if (href.includes('wa.me')) {
+        this.style.color = '#25D366';
+        return;
+      }
+
+      if (href.startsWith('tel:')) {
+        this.style.color = 'var(--gold)';
+        return;
+      }
+
+      this.style.color = 'rgba(245, 240, 232, 0.6)';
+    });
   });
 }
 
@@ -212,7 +214,9 @@ function initSmoothAnchors() {
     const target = document.getElementById(id);
     if (target) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const headerOffset = 88;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerOffset;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   });
 }
@@ -233,6 +237,7 @@ function initWaFloat() {
 
 // ── 12. PARTICLE CANVAS (gold dust) ─────────────────────────────────────────
 function initParticles() {
+  if (window.matchMedia('(max-width: 767px)').matches) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   const canvas = document.createElement('canvas');
